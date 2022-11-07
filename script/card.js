@@ -1,6 +1,6 @@
 class Card {
   constructor(dataCat, selectorTemplate) {
-    this._data = dataCat;
+    this._dataCat = dataCat;
     this._selectorTemplate = selectorTemplate;
   }
 
@@ -13,19 +13,16 @@ class Card {
   getElement() {
     this.element = this._getTempate().cloneNode(true);
     const cardTitle = this.element.querySelector(".card-name");
-    const cardImage = this.element.querySelector(".card-image");
+    const cardImg = this.element.querySelector(".card-image");
     const cardLike = this.element.querySelector(".card-like");
 
-    if(!this._data.favourite) {
-      cardLike.remove()
+    if (!this._dataCat.favourite) {
+      cardLike.remove();
     }
 
-    cardTitle.textContent = this._data.name;
-    cardImage.src = this._data.img_link;
+    cardTitle.textContent = this._dataCat.name;
+    cardImg.src = this._dataCat.img_link;
 
     return this.element;
   }
 }
-
-
-
