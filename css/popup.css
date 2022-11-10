@@ -31,9 +31,10 @@
   top: 20px;
   right: 20px;
   font-family: 'Font Awesome 6 Free';
-  border: transparent;
+  border: none;
   font-size: 25px;
   cursor: pointer;
+  background: transparent;
 }
 
 .popup__image {
