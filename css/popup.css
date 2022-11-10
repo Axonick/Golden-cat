@@ -31,7 +31,7 @@
   top: 20px;
   right: 20px;
   font-family: 'Font Awesome 6 Free';
-  border: none;
+  border: transparent;
   font-size: 25px;
   cursor: pointer;
 }
