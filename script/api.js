@@ -26,9 +26,9 @@ https://sb-cats.herokuapp.com/api/2/<name>/delete/<id кота>
 */
 
 const CONFIG_API = {
-  url: "https://sb-cats.herokuapp.com/api/2/Axonick",
+  url: 'https://sb-cats.herokuapp.com/api/2/Axonick',
   header: {
-    "Content-type": "application/json",
+    'Content-type': 'application/json',
   },
 };
 
@@ -38,23 +38,28 @@ class Api {
     this._headers = config.headers;
   }
 
-  getAllCats() {
-    fetch(`${this._url}/show`, {
-      method: "GET",
-    });
+  _onResponce(res) {
+    return res.ok
+      ? res.json()
+      : Promise.reject({ ...res, message: 'Ошибка на стороне сервера' });
   }
 
+  getAllCats() {
+    return fetch(`${this._url}/show`, {
+      method: 'GET',
+    }).then(this._onResponce);
+  }
   addNewCat(data) {
-    fetch(`${this._url}/add`, {
-      method: "POST",
+    return fetch(`${this._url}/add`, {
+      method: 'POST',
       body: JSON.stringify(data),
       headers: this._headers,
-    });
+    }).then(this._onResponce);
   }
 
   updateCatById(idCat, data) {
     fetch(`${this._url}/update/${idCat}`, {
-      method: "PUT",
+      method: 'PUT',
       body: JSON.stringify(data),
       headers: this._headers,
     });
@@ -62,18 +67,15 @@ class Api {
 
   getCatById(idCat) {
     fetch(`${this._url}/show/${idCat}`, {
-      method: "GET",
+      method: 'GET',
     });
   }
-
 
   deleteCatById(idCat) {
     fetch(`${this._url}/delete/${idCat}`, {
-      method: "DELETE",
+      method: 'DELETE',
     });
   }
-
 }
 
-const api = new Api(CONFIG_API);
-
+export const api = new Api(CONFIG_API);

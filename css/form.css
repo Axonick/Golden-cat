@@ -26,13 +26,13 @@
   outline: none;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #000;
+  border: 1px solid #CFD8DC;
   border-radius: 4px;
   padding: 8px 8px;
 }
 
 .form__input:focus {
-  border: 1px solid red;
+  border: 1px solid #405DE6;
 }
 
 .form__fake-checkbox {
@@ -53,12 +53,12 @@
 
 .form__checkbox:focus~.form__fake-checkbox,
 .form__checkbox:focus~.form__label {
-  /*color: var(--text-secondary-color);*/
+  color: #7B8E98;
 }
 
 .form__checkbox:checked~.form__fake-checkbox,
 .form__checkbox:checked~.form__label {
-  /*color: var(--accent-color);*/
+  color: #405DE6;
 }
 
 .form__checkbox:checked:focus~.form__fake-checkbox,

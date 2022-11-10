@@ -5,15 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" defer></script>
   <link rel="shortcut icon" href="/images/icon/cat.png" type="image/x-icon">
   <link rel="stylesheet" href="/css/style.css">
   <title>Cat's</title>
 </head>
 
-<body>
+<body class="wrapper">
   <header class="header__container">
     <div class="header__logo">
       <img src="/images/cat-logo.png" alt="Logo-cat">
@@ -21,12 +20,12 @@
     <div>
       <h1 class="header-text">Котик с улицы Лизюкова</h1>
     </div>
-    <button class="add-btn" id="addbtn" title="Добавь меня">Добавить котика</button>
+    <button class="add-btn" id="addbtn" title="Добавь меня"><i class="fa-solid fa-plus"></i></button>
+    <button class="add-btn" id="loginbtn">Вход</button>
   </header>
   <main>
     <section class="cards__cat">
-
-
+      <h2 class="visually-hidden">Список котиков</h2>
 
     </section>
   </main>
@@ -54,7 +53,7 @@
         <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
         <label class="form__checkbox-wrap">
           <input type="checkbox" name="favourite" class="form__checkbox " placeholder="">
-          <span class="form__label">Любимчик</span>
+          <span class="form__label">Любимый</span>
           <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
         </label>
         <input type="url" class="form__input form__input_image" name="img_link" placeholder="Ссылка на фото">
@@ -64,33 +63,28 @@
   </div>
   <div class="popup popup-login">
     <div class="popup__container">
-      <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+      <button class="popup__close btn"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button>
       <h2>Авторизация</h2>
       <form class="form" id="popup-form-login">
         <input type="email" class="form__input" name="email" required placeholder="email">
         <input type="password" class="form__input" name="password" placeholder="password">
-        <button type="submit" class="form__btn btn">Войти</button>
+        <button type="submit" class="form__btn btn">Войти<i class="fa-solid fa-user"></i></button>
       </form>
     </div>
   </div>
   <template id="card-template">
     <div class="card">
       <img class="card-image" src="#" alt="Cat">
-      <a href="#">
+      <a href="#" class="card-link">
         <h3 class="card-name">
-          Пуша
         </h3>
       </a>
-      <button class="card-like">
+      <button class="card-like" aria-label="Поставить лайк">
         <i class="fa-solid fa-heart"></i>
       </button>
     </div>
   </template>
-  <script src="/script/cats.js" defer></script>
-  <script src="/script/api.js" defer></script>
-  <script src="/script/card.js" defer></script>
-  <script src="/script/popup.js" defer></script>
-  <script src="/script/index.js" defer></script>
+  <script src="/script/index.js" defer type="module"></script>
 </body>
 
 </html>

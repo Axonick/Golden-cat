@@ -1,10 +1,11 @@
 main {
-  padding: 30px;
+  padding: 15px;
+  flex: 1;
 }
 
 .cards__cat {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
 }
@@ -13,15 +14,17 @@ main {
   position: relative;
 }
 
-.card h3 {
+.card-link {
   display: block;
   position: absolute;
-  top: 10px;
+  top: -10px;
   left: 10px;
   font-style: italic;
   color: #fff;
   margin: 0;
   font-size: 18px;
+  text-decoration: none;
+  z-index: 2;
 }
 
 .card-image {
@@ -35,7 +38,7 @@ main {
 
 .card-like {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 10px;
   cursor: pointer;
   z-index: 3;
@@ -45,22 +48,3 @@ main {
   color: tomato;
 }
 
-@media (max-width: 720px) {
-  .card h3 {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 556px) {
-  .cards__cat {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 320px) {
-  .cards__cat {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
