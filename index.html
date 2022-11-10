@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" defer></script>
-  <link rel="shortcut icon" href="/images/icon/cat.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/icon/cat.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <title>Cat's</title>
 </head>
 
 <body class="wrapper">
   <header class="header__container">
     <div class="header__logo">
-      <img src="/images/cat-logo.png" alt="Logo-cat">
+      <img src="images/cat-logo.png" alt="Logo-cat">
     </div>
     <div>
       <h1 class="header-text">Котик с улицы Лизюкова</h1>
@@ -38,7 +38,6 @@
         <a href="#"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
-
   </footer>
   <div class="popup popup-add-cats">
     <div class="popup__container">
@@ -52,8 +51,8 @@
         <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
         <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
         <label class="form__checkbox-wrap">
-          <input type="checkbox" name="favourite" class="form__checkbox " placeholder="">
-          <span class="form__label">Любимый</span>
+          <input type="checkbox" name="favourite" class="form__checkbox">
+          <span class="form__label">Любимчик</span>
           <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
         </label>
         <input type="url" class="form__input form__input_image" name="img_link" placeholder="Ссылка на фото">
@@ -84,7 +83,7 @@
       </button>
     </div>
   </template>
-  <script src="/script/index.js" defer type="module"></script>
+  <script src="script/index.js" type="module" defer></script>
 </body>
 
 </html>

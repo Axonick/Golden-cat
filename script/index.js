@@ -127,3 +127,5 @@ if (!isAutorization) {
 //localStorage.setItem('lastname', JSON.stringify('nam'));
 
 //localStorage.clear();
+
+console.log('Roman');
