@@ -14,7 +14,6 @@
 
 .footer-text {
   font-size: 18px;
-  font-weight: bold;
   font-style: italic;
   color: blue;
 }
@@ -23,10 +22,9 @@
   font-size: 20px;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) {
   .footer-text {
     font-size: 12px;
-    font-weight: normal;
   }
   .footer-links {
     font-size: 12px;
