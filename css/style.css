@@ -1,9 +1,9 @@
-@import url(/css/clear.css);
-@import url(/css/header.css);
-@import url(/css/main.css);
-@import url(/css/footer.css);
-@import url(/css/popup.css);
-@import url(/css/form.css);
+@import url(/css/all/clear.css);
+@import url(/css/all/header.css);
+@import url(/css/all/main.css);
+@import url(/css/all/footer.css);
+@import url(/css/all/form.css);
+@import url(/css/all/popup.css);
 
 body {
   font-family: 'Arial', 'Helvetica', sans-serif;
